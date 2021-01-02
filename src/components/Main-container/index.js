@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import ReactCountryFlag from "react-country-flag"
 import './styles.css'
 
 function MainContainer() {
@@ -13,12 +14,6 @@ function MainContainer() {
         setCurrentSec(time.getSeconds())
     }, 1000)
 
-    useEffect(() => {
-
-        console.log('I am Awais Niazz')
-    }
-    )
-
     return (
         < div className="conatiner">
             <div className="conatiner2">
@@ -26,11 +21,13 @@ function MainContainer() {
                     <div>HH</div>
                     <div>MM</div>
                     <div>SS</div>
+                    <div>Ctry</div>
                 </div>
                 <div className="actual-time">
                     <div>{currentHours}</div>
                     <div>{currentMin}</div>
                     <div>{currentSec}</div>
+                    <div><ReactCountryFlag countryCode="PK" svg /></div>
                 </div>
             </div>
         </div >
